@@ -24,5 +24,15 @@ export class HomeComponent implements OnInit{
 
 
   }
+  async deleteDepartamento(id: number): Promise<void>{
+    let response = await this._service.deleteDepartamentoAsync(id);
+    await this.loadepartamentos();
+  }
+
+  //esto ya son fuegos artificales, para que se vea el cambio de la lista de departamentos sin recargar la pagina
+  async loadepartamentos():Promise<void>{
+    this.departamentos = await this._service.getDpertamentosAsync();
+    this._cdr.detectChanges();
+  }
 
 }

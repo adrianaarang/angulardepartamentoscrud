@@ -1,1 +1,15 @@
-<p>create-component works!</p>
+<h1>Creare departamento</h1>
+
+
+<form createform="ngForm">
+  <label>Id departamento: </label>
+  <input type="number" name="cajaid" #cajaid class="form-control" />
+  <label>Nombre: </label>
+  <input type="text" name="cajanombre" #cajanombre class="form-control" />
+  <label>Localidad: </label>
+  <input type="text" name="cajaLocalidad" #cajaLocalidad class="form-control" />
+  <button class="btn btn-info" (click)="insertDepartamento()">
+    Nuevo
+  </button>
+
+</form>

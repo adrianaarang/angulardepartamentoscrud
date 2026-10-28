@@ -12,6 +12,14 @@
         <td>{{dept.numero}}</td>
         <td>{{dept.nombre}}</td>
         <td>{{dept.localidad}}</td>
+         <a [routerLink]="['/details', dept.numero, dept.nombre, dept.localidad]">
+          Detalles
+         </a>
+         <a [routerLink]="['/update', dept.numero]" class="btn btn-info">
+          Editar
+         </a>
+         <button class=" btn btn- danger"
+         (click)="deleteDepartamento(dept.numero)">Eliminar</button>
       </tr>
     }
   </tbody>
